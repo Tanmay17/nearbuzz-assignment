@@ -21,6 +21,8 @@
   "homepage": "https://github.com/Tanmay17/nearbuzz-assignment#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-validator": "^6.6.1"
+    "express-validator": "^6.6.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.5"
   }
 }
