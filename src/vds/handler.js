@@ -119,11 +119,44 @@ const listContent = async function listContent ( req, res ) {
     }
 }
 
+const renderContent = async function renderContent ( req, res ) {
+
+    try {
+
+        const { vdsId } = req.params;
+
+        const response = await ContentService.getContent( vdsId );
+        
+        if( !response ) {
+
+            return res.sendStatus( 422 );
+
+        }
+        
+        const contents = response.map( ( content ) => ( {
+                name: content.title,
+                url: content.url
+            } ) 
+        );
+
+        return res.render( 'contents', {
+            contents
+        });
+
+    } catch( error ) {
+
+        console.error( 'GET /render/:vdsId =>', error.message );
+        return res.sendStatus( 500 );
+
+    }
+}
+
 module.exports = {
 
     addVds,
     listVds,
     addContent,
-    listContent
+    listContent,
+    renderContent
 
 }

@@ -1,6 +1,6 @@
 const express = require( 'express' );
 const { Validator } = require( '../../lib/plugin' );
-const { addVds, listVds, addContent, listContent } = require( './handler' );
+const { addVds, listVds, addContent, listContent, renderContent } = require( './handler' );
 
 const router = express.Router();
 
@@ -15,5 +15,8 @@ router.post( '/content', Validator.validate( 'addContent' ), addContent );
 
 // To List the Content
 router.get( '/content', Validator.validate( 'getContent' ), listContent );
+
+// To Render the Page
+router.get( '/render/:vdsId', Validator.validate( 'renderContent' ), renderContent );
 
 module.exports = router;

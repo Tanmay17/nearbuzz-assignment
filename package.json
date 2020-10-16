@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Tanmay17/nearbuzz-assignment#readme",
   "dependencies": {
     "aws-sdk": "^2.772.0",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.0",
     "express-validator": "^6.6.1",
