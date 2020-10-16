@@ -1,0 +1,9 @@
+<html>
+    <ul class="contents">
+        <% contents.forEach(function(content) { %>
+            <li class="content">
+                <h2><a href="<%=content.url%>" class="content-title"><%=content.name%></a></h2>
+            </li>
+        <% })%>
+    </ul>
+</html>
