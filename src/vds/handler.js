@@ -95,10 +95,35 @@ const addContent = async function addContent ( req, res ) {
     }
 }
 
+const listContent = async function listContent ( req, res ) {
+
+    try {
+
+        const { vdsId } = req.query;
+
+        const response = await ContentService.getContent( vdsId );
+        
+        if( !response ) {
+
+            return res.sendStatus( 422 );
+
+        }
+        
+        return res.send( { data: response } ).status( 200 );
+
+    } catch( error ) {
+
+        console.error( 'GET /vds =>', error.message );
+        return res.sendStatus( 500 );
+
+    }
+}
+
 module.exports = {
 
     addVds,
     listVds,
-    addContent
+    addContent,
+    listContent
 
 }
