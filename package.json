@@ -1,0 +1,31 @@
+{
+  "name": "nearbuzz-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tanmay17/nearbuzz-assignment.git"
+  },
+  "author": "Tanmay Srivastava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tanmay17/nearbuzz-assignment/issues"
+  },
+  "homepage": "https://github.com/Tanmay17/nearbuzz-assignment#readme",
+  "dependencies": {
+    "aws-sdk": "^2.772.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "express-validator": "^6.6.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.5"
+  }
+}
